@@ -106,8 +106,9 @@ Create a new scene
 
 Add 'Player - wall collide', 'Level switch', Wall and Crate actors
 
-*Can't get the crate behaviour right, too slidey, adjusting physics attributes (drag?) is the key*
-*Possibly add floor to entire scene (not collidable, always in contact with objects) so friction is constantly applied*
+*Can't get the crate behaviour right, too slidey, adjusting physics attributes (drag?) is the key?*
+
+*Possibly add floor to entire scene (not collidable, always in contact with objects) so friction is constantly applied?*
 
 *Crates includes bonus actor 'explodey crate' which has a rule that on contact with the player makes the crate explode* 😊
 
@@ -164,3 +165,15 @@ You can also disable the Display Text behaviour
 These camera values are used to translate the mouse position in screen space to a position in the scene (see the actor's group 'Calculate Mouse Position')
 
 The follow behaviour has been updated to use this translated mouse position instead of the actual mouse position
+
+## Not covered in these scenes but would have made sense to do next
+Persistant hit/death system: instead of just resetting the scene, have a game variable that limits resets and then resets the game
+
+Collectibles: use a game attribute to count objects collected across levels, so a new actor that increments that game attribute
+
+AI vision: rather than proximity based AI, limit by the angle to the player, to suggest they can see them, some way to see if the line of sight is obstructed?  Add a vision actor, constrain the position rotation to the enemy, contrain the length to the distance to the player, to see player they must be in contact with the vision actor but not in contact with wall/scenery?
+
+Path-finding AI: what is here moves to the player, possibly add a table of way-points in a scene, an actor moves towards the first (in the same way they move to the player), when there they move to the second, if the player becomes visible they move to the player, otherwise back to the next way point
+
+Textures and Animation: weren't a concern, covered well elsewhere
+
